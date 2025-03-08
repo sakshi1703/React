@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Counter = ()=>{
 
@@ -21,6 +21,10 @@ const Counter = ()=>{
     const handleReset = ()=>{
         setCount(0)
     }
+
+    useEffect(()=>{
+        console.log()
+    },[count])
 
     return(
         <>

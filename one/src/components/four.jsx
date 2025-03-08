@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { firestore } from './firebase-config'; // Assume correct config here.
+// import { firestore } from './firebase-config'; // Assume correct config here.
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
@@ -11,7 +11,7 @@ const TaskList = () => {
       setTasks(snapshot.docs.map(doc => doc.data()));
     };
     fetchTasks();
-  }, [tasks]); // Problem with dependencies.
+  }, []); // Problem with dependencies.
 
   return (
     <div>
